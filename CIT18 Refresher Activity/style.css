@@ -1,0 +1,149 @@
+/* Default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('NeonBG.jpg') no-repeat center center fixed; /* Use NeonBG.jpg as the background image */
+    background-size: cover; /* Ensure the background covers the entire screen */
+    color: #D3D9D4; /* Light text for contrast */
+}
+
+header {
+    background-color: rgba(18, 78, 102, 0.8); /* Striking electric blue with some transparency */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.photo-box {
+    float: left;
+    margin-right: 20px;
+}
+
+.photo-box img {
+    border-radius: 50%; /* Circular profile image */
+    width: 150px;
+    height: 150px;
+}
+
+.description {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #748D92; /* Light gray links */
+}
+
+section {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8); /* White background with 80% transparency */
+    color: #212A31; /* Dark text for contrast */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #124E66; /* Electric blue for section headers */
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin: 0;
+    border-right: 0.15em solid #D3D9D4; /* Cursor */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Typewriter animation */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: #D3D9D4; }
+    to { border-right-color: transparent; }
+}
+
+.typewriter p {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #D3D9D4; /* Adjust cursor color */
+    white-space: nowrap;
+    animation: 
+        typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+/* Slider styles */
+#toggle-dark-mode {
+    width: 60px;
+    height: 30px;
+    background: #D3D9D4;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-button {
+    width: 20px;
+    height: 20px;
+    background: #124E66;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: url('NeonBG.jpg') no-repeat center center fixed; /* Keep the background image for dark mode */
+    background-size: cover; /* Ensure the background covers the entire screen */
+    color: #D3D9D4; /* Light text */
+}
+
+body.dark-mode header {
+    background-color: rgba(46, 57, 68, 0.8); /* Slightly darker for header in dark mode */
+}
+
+body.dark-mode nav ul li a {
+    color: #D3D9D4; /* Light links */
+}
+
+body.dark-mode section {
+    background: rgba(46, 57, 68, 0.8); /* Dark transparent background */
+    color: #D3D9D4; /* Light text */
+}
+
+body.dark-mode .slider-button {
+    transform: translateX(30px); /* Move the slider button to the right */
+}
